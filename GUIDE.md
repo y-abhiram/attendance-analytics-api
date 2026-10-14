@@ -127,23 +127,13 @@ as the real endpoint, with `executionStats` verbosity. Look for IXSCAN, inspect
 examined keys/documents, and check that COLLSCAN is absent. A hint ensures an index
 is used, but does not by itself prove that a query is efficient; inspect the counts.
 
-## 7. Test and prepare submission
+## 7. Test 
 
 Run `python -m pytest -q` with MongoDB running. Tests cover grace boundaries,
 overnight shifts, strict input types, concurrent writes, correction history,
 legacy fields, joins, gaps, weekends, mid-month hires, ranks and explain plans.
 
-Before submitting, run from a clean clone, read every function, and practice
-changing a rule. For example, find the two places needed to change half-day hours
-and its test. Read the review table and verify its examples yourself.
 
-Only include intended submission files and tests in the public repository. Keep
-credentials and the original problem statement out. Submit the repository link
-by 15 October 2026 at 11:59 PM IST, keep it public until 31 October, and be ready
-to walk through the implementation live. No repository has been published or
-form submitted by this implementation work.
-
-Once you create a Git repository, stage submission files explicitly:
 
 ```bash
 git add app/main.py app/__init__.py requirements.txt requirements-dev.txt README.md REVIEW.md DECISIONS.md GUIDE.md .env.example .gitignore pytest.ini tests/
